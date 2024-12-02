@@ -1,0 +1,78 @@
+/* Product Grid Styles */
+.products-grid {
+    display: grid;
+    /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Auto-fill columns with a minimum width of 300px */
+    gap: 20px;
+    /* Space between cards */
+    padding: 20px;
+    /* Padding around the grid */
+    justify-items: center;
+    /* Center items horizontally */
+}
+
+/* Product Card Styles */
+.product-card {
+    background-color: #fff;
+    /* White background for cards */
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 8px;
+    /* Rounded corners */
+    overflow: hidden;
+    /* Hide any overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow around the card */
+    text-align: center;
+    /* Center the text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    /* Lift the card slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Enhanced shadow on hover */
+}
+
+.product-card img {
+    width: 100%;
+    /* Make image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    /* Set font size */
+    margin-top: 15px;
+    /* Space above the heading */
+    color: #333;
+    /* Dark text color */
+}
+
+.product-card p {
+    font-size: 1rem;
+    /* Set font size */
+    color: #777;
+    /* Lighter text color */
+    margin: 10px 0;
+    /* Space around the paragraph */
+}
+
+/* Responsive Design for Product Grid */
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        /* One column on very small screens */
+    }
+}
